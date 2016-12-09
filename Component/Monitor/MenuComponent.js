@@ -22,10 +22,13 @@ var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
 
 export default class MenuComponent extends Component {
+  static contextTypes = {
+      router: React.PropTypes.object.isRequired
+  };
     render() {
         return (
           //activeOpacity={0.5}
-          <TouchableOpacity  onPress={()=>{alert()}}  style={{height:80}}>
+          <TouchableOpacity  onPress={()=>{this.context.router.push(this.props.menuTarget)}}  style={{height:80}}>
             <View style={styles.MenuLayout}>
               <Image source={{uri:this.props.menuImg}} style={styles.ImageStyle}/>
               <Text style={styles.TextStyle}>{this.props.menuTitle}</Text>

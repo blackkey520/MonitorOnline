@@ -38,7 +38,7 @@ export default class Map extends Component {
     }
     render() {
         if (this.state.Coordinate != null) {
-            debugger;
+             
             return (
 
 

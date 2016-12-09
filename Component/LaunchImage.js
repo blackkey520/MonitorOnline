@@ -11,30 +11,39 @@ import {
   Text,
   View,
   Image,
-  
-} from 'react-native';
 
+} from 'react-native';
+import { Provider } from 'react-redux';
+import {getStore} from '../Store/store';
  import Login from './Login';
 
 export default class LaunchImage extends Component {
-  render() {
-    return (
-      // <Image source={{uri:'launchimage'}} style={styles.launchImageStyle}/>
-      <View>
-        <Image source={{uri:'launchimage'}} style={styles.launchImageStyle}/>
-      </View>
-    );
+  constructor(props){
+       super(props);
+       this.state={
+           store:null
+       }
   }
-  componentDidMount(){
-    //定时：隔2s切换到Main
-    setTimeout(()=>{
-        //跳转，页面切换
-        this.props.navigator.replace({
-            component:Login,
+
+    componentDidMount(){
+        const store = getStore();
+        this.setState({
+            store:store
         });
-    },500)
+    }
+  render() {
+    if(!this.state.store){
+        return (
+          <Provider store={store}>
+            <View>
+              <Image source={{uri:'launchimage'}} style={styles.launchImageStyle}/>
+            </View>
+          </Provider>
+        );
+    }
 
   }
+   
 }
 
 const styles = StyleSheet.create({

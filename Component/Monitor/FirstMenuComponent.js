@@ -31,14 +31,28 @@ export default class FirstMenuComponent extends Component {
               </View>
 
               <View style={styles.MenuBottom}>
-                <MenuComponent menuImg="realtime_icon" menuTitle="实时数据"></MenuComponent>
-                <MenuComponent menuImg="realtime_icon" menuTitle="实时数据"></MenuComponent>
-                <MenuComponent menuImg="realtime_icon" menuTitle="实时数据"></MenuComponent>
-                <MenuComponent menuImg="realtime_icon" menuTitle= "实时数据"></MenuComponent>
-                <MenuComponent menuImg="realtime_icon" menuTitle="实时数据"></MenuComponent>
+                {this.renderMenu()}
               </View>
             </View>
         );
+    }
+    renderMenu(){
+
+      var SecondMenuData=this.props.childrenMenu;
+      var menuArr=[];
+      for(var i=0;i<SecondMenuData.length;i++)
+        {
+          var secondMenu=SecondMenuData[i];
+          menuArr.push(
+              <MenuComponent
+                menuImg={secondMenu.SecondMenuIco}
+                menuTarget={secondMenu.SecondMenuTarget}
+                menuTitle={secondMenu.SecondMenuName}
+                key={i}>
+                </MenuComponent>
+          );
+        }
+        return menuArr;
     }
 }
 

@@ -4,8 +4,9 @@
 
 const config={
     api:{
-        base:'http://172.16.4.137:8085/',
-        login:'rest/Author/IsLogin?userName={userName}&passWord={passWord}',
+        //base:'http://172.16.4.137:8085/',
+        base:'http://61.50.135.114:8085/',
+        login:'rest/Author/IsLogin',
 
     },
 
