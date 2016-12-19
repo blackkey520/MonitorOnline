@@ -1,8 +1,11 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * 公共Loading组件
+ * Param：
+ * LoadingTitle=>Loading中现实的文字
+ * liz
+ * 2016.12.19
  */
+
 
 import React, { Component } from 'react';
 import {

@@ -32,6 +32,7 @@ HTTPUtil.get = function(url, params, headers) {
             headers: headers,
           })
           .then((response) => {
+              console.log(response);
               if (response.ok) {
                   return response.json();
               } else {
@@ -46,7 +47,13 @@ HTTPUtil.get = function(url, params, headers) {
           })
     })
 }
-
+/**
+ * 基于 fetch 封装的 URLPost 请求
+ * @param url
+ * @param params {}
+ * @param headers
+ * @returns {Promise}
+ */
 HTTPUtil.urlpost = function(url, params, headers) {
 
   if(!headers)
@@ -67,12 +74,14 @@ HTTPUtil.urlpost = function(url, params, headers) {
             url += '&' + paramsArray.join('&')
         }
     }
+
     return new Promise(function (resolve, reject) {
       fetch(url, {
             method: 'POST',
             headers: headers,
           })
           .then((response) => {
+              console.log(response);
               if (response.ok) {
                   return response.json();
               } else {

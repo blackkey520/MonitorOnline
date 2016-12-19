@@ -1,0 +1,22 @@
+[
+  {"Page":"1",
+    "Item":[
+    {"MonitorTypeCode":"1","MonitorTypeName":"废水","MonitorTypeIco":"zt_fs"},
+    {"MonitorTypeCode":"2","MonitorTypeName":"废气","MonitorTypeIco":"zt_fq"},
+    {"MonitorTypeCode":"3","MonitorTypeName":"大气","MonitorTypeIco":"zt_dq"},
+    {"MonitorTypeCode":"4","MonitorTypeName":"水质","MonitorTypeIco":"zt_sz"},
+    {"MonitorTypeCode":"5","MonitorTypeName":"VOCs","MonitorTypeIco":"zt_voc"},
+    {"MonitorTypeCode":"6","MonitorTypeName":"扬尘","MonitorTypeIco":"zt_yc"},
+    {"MonitorTypeCode":"7","MonitorTypeName":"恶臭","MonitorTypeIco":"zt_ec"},
+    {"MonitorTypeCode":"8","MonitorTypeName":"小型站","MonitorTypeIco":"zt_xxz"}
+  ]},
+  {"Page":"2",
+    "Item":[
+    {"MonitorTypeCode":"11","MonitorTypeName":"废水","MonitorTypeIco":"zt_fs"},
+    {"MonitorTypeCode":"22","MonitorTypeName":"废气","MonitorTypeIco":"zt_fq"},
+    {"MonitorTypeCode":"33","MonitorTypeName":"大气","MonitorTypeIco":"zt_dq"},
+    {"MonitorTypeCode":"44","MonitorTypeName":"水质","MonitorTypeIco":"zt_sz"},
+    {"MonitorTypeCode":"55","MonitorTypeName":"VOCs","MonitorTypeIco":"zt_voc"},
+    {"MonitorTypeCode":"66","MonitorTypeName":"扬尘","MonitorTypeIco":"zt_yc"}
+  ]}
+]

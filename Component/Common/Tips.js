@@ -1,4 +1,16 @@
-
+/**
+ * 公共Toast提示组件
+ * Param：
+ * AutoShow=》是否自动显示 bool
+ * Message=》显示信息的内容
+ * position=》显示信息的位置 string=》top bottom
+ * positionValue=》决定定位为止 number
+ * fadeInDuration=》淡入动画时间 number
+ * fadeOutDuration=》淡出动画时间 number
+ * opacity=》透明度 number
+ * liz
+ * 2016.12.19
+ */
 
 import React, {Component} from 'react';
 import {
@@ -8,19 +20,22 @@ import {
     Dimensions,
     Text,
 } from 'react-native'
+// 定义通用变量
 export const DURATION = { LENGTH_LONG: 2000, LENGTH_SHORT: 500 };
+/*
+场景参数变量
+*/
 const {height, width} = Dimensions.get('window');
 
 export default class Tips extends Component {
-
+    // 构造方法
     constructor(props) {
         super(props);
         this.state = {
-            isShow: false,
+            isShow: false, 
             text: '',
             opacityValue: new Animated.Value(this.props.opacity),
         }
-
     }
     show(text, duration) {
         this.duration = duration || DURATION.LENGTH_SHORT;

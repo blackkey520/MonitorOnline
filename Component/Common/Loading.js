@@ -1,6 +1,11 @@
 /**
- * Created by ljunb on 16/6/2.
+ * 公共Loading组件
+ * Param：
+ * Message=>Loading中现实的文字
+ * liz
+ * 2016.12.19
  */
+
 import React from 'react';
 import {
     StyleSheet,
@@ -9,7 +14,9 @@ import {
     ActivityIndicator,
     Dimensions
 } from 'react-native';
-
+/*
+场景参数变量
+*/
 var {width, height} = Dimensions.get('window');
 
 export default class Loading extends React.Component {

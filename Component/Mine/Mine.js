@@ -1,7 +1,7 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * 我的场景组件
+ * liz
+ * 2016.12.19
  */
 
 import React, {Component} from 'react';
@@ -13,15 +13,23 @@ import {
     ScrollView,
     Image
 } from 'react-native';
-
+/*
+组件引用
+*/
 import MineCellComponent from './MineCellComponent'
+/*
+场景参数变量
+*/
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
+
 export default class Mine extends Component {
+  // 组件渲染方法
     render() {
         return (
             <ScrollView>
                 <View style={styles.MineLayout}>
+                  {/* 渲染我的场景头部的用户信息视图 */}
                     <View style={styles.TopMineStyle}>
                         <Image source={{
                             uri: 'bg_user'
@@ -49,6 +57,7 @@ export default class Mine extends Component {
                             </View>
                         </View>
                     </View>
+                    {/* 调用单个菜单组件，分组渲染我的里面的菜单内容 */}
                     <View style={{marginTop:20}}>
                         <MineCellComponent cellLeftImg="address_icon" cellTitle="通讯录"/>
                         <MineCellComponent cellLeftImg="focused_icon" cellTitle="我的关注"/>

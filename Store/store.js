@@ -1,4 +1,8 @@
-
+/**
+ * 全局Store
+ * liz
+ * 2016.12.19
+ */
 
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import rootReducer from '../Reducers/index'
@@ -17,7 +21,9 @@ const thunk = store => next => action =>
     action(store.dispatch, store.getState) :
     next(action)
 
-
+    /**
+     * 日志中间件
+     */
 const logger = store => next => action => {
     console.log('dispatching', action)
     let result = next(action)

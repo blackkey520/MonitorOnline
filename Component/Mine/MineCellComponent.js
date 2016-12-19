@@ -1,7 +1,7 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * 我的菜单组件
+ * liz
+ * 2016.12.19
  */
 
 import React, {Component} from 'react';
@@ -17,11 +17,14 @@ import {
     TouchableHighlight,
     TouchableOpacity
 } from 'react-native';
-
+/*
+场景参数变量
+*/
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
 
 export default class MineCellComponent extends Component {
+  // 组件渲染方法
     render() {
         return (
           //activeOpacity={0.5}

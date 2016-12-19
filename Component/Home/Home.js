@@ -1,8 +1,9 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * 首页场景组件
+ * liz
+ * 2016.12.19
  */
+
 
 import React, { Component } from 'react';
 import {
@@ -10,15 +11,19 @@ import {
   StyleSheet,
   Text,
   View,
-  ScrollView
+  ScrollView,
+  AsyncStorage
 } from 'react-native';
 
 
 export default class Home extends Component {
+  // 组件渲染方法
   render() {
     return (
       <View style={styles.TextStyle}>
-        <Text>
+        <Text onPress={()=>{
+          this.clear();
+        }}>
           主页
         </Text>
       </View>
@@ -26,8 +31,7 @@ export default class Home extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-
+const styles = StyleSheet.create({ 
  TextStyle:{
    flex: 1,
    justifyContent: 'center',
